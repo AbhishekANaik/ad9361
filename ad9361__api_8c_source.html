@@ -764,7 +764,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        ret = <a class="code" href="ad9361_8c.html#a874202e472a7b9414c5d09bb7ea0d404">ad9361_get_tx_atten</a>(phy, ch + 1);</div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;        <span class="keywordflow">if</span>(ret &lt; 0)</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                <span class="keywordflow">return</span> EINVAL;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;        *attenuation_db = ret;</div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;        <span class="keywordflow">return</span> 0;</div>
@@ -939,7 +939,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;                val = (reg_val_buf[1] &lt;&lt; 1) | ((reg_val_buf[0] &amp; TX_RSSI_2) &gt;&gt; 1);</div>
 <div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;                <span class="keywordflow">return</span> -EINVAL;</div>
 <div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;        }</div>
 <div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;</div>
 <div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;        val *= RSSI_RESOLUTION;</div>
@@ -983,7 +983,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;                phy-&gt;pdata-&gt;rx2tx2 = 1;</div>
 <div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;                <span class="keywordflow">return</span> -EINVAL;</div>
 <div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;        }</div>
 <div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;</div>
 <div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;        phy-&gt;adc_conv-&gt;chip_info = &amp;axiadc_chip_info_tbl[phy-&gt;pdata-&gt;rx2tx2 ? ID_AD9361 : ID_AD9364];</div>
@@ -1018,7 +1018,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 16 2015 15:05:53 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 16 2015 16:20:42 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
