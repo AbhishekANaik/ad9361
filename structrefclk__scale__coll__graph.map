@@ -1,17 +1,22 @@
 <map id="refclk_scale" name="refclk_scale">
-<area shape="rect" id="node2" href="$structad9361__rf__phy.html" title="ad9361_rf_phy" alt="" coords="755,464,861,493"/>
-<area shape="rect" id="node4" href="$structad9361__phy__platform__data.html" title="ad9361_phy_platform_data" alt="" coords="445,192,624,221"/>
-<area shape="rect" id="node6" href="$structrssi__control.html" title="rssi_control" alt="" coords="156,5,244,35"/>
-<area shape="rect" id="node8" href="$structelna__control.html" title="elna_control" alt="" coords="155,59,245,88"/>
-<area shape="rect" id="node10" href="$structauxadc__control.html" title="auxadc_control" alt="" coords="145,112,255,141"/>
-<area shape="rect" id="node12" href="$structauxdac__control.html" title="auxdac_control" alt="" coords="145,165,255,195"/>
-<area shape="rect" id="node14" href="$structport__control.html" title="port_control" alt="" coords="155,219,245,248"/>
-<area shape="rect" id="node16" href="$structctrl__outs__control.html" title="ctrl_outs_control" alt="" coords="141,272,259,301"/>
-<area shape="rect" id="node18" href="$structgain__control.html" title="gain_control" alt="" coords="155,325,245,355"/>
-<area shape="rect" id="node20" href="$structad9361__fastlock.html" title="ad9361_fastlock" alt="" coords="476,359,593,388"/>
-<area shape="rect" id="node22" href="$structad9361__fastlock__entry.html" title="ad9361_fastlock_entry" alt="" coords="124,379,276,408"/>
-<area shape="rect" id="node25" href="$structrx__gain__info.html" title="rx_gain_info" alt="" coords="489,412,580,441"/>
-<area shape="rect" id="node27" href="$structclk__onecell__data.html" title="clk_onecell_data" alt="" coords="303,519,420,548"/>
-<area shape="rect" id="node29" href="$structclk.html" title="clk" alt="" coords="7,519,44,548"/>
-<area shape="rect" id="node32" href="$structclk__hw.html" title="clk_hw" alt="" coords="169,573,231,603"/>
+<area shape="rect" id="node2" href="$structad9361__rf__phy.html" title="ad9361_rf_phy" alt="" coords="733,539,840,568"/>
+<area shape="rect" id="node4" href="$structaxiadc__state.html" title="axiadc_state" alt="" coords="949,539,1045,568"/>
+<area shape="rect" id="node7" href="$structad9361__phy__platform__data.html" title="ad9361_phy_platform_data" alt="" coords="424,219,603,248"/>
+<area shape="rect" id="node9" href="$structrssi__control.html" title="rssi_control" alt="" coords="175,5,263,35"/>
+<area shape="rect" id="node11" href="$structelna__control.html" title="elna_control" alt="" coords="173,59,264,88"/>
+<area shape="rect" id="node13" href="$structtx__monitor__control.html" title="tx_monitor_control" alt="" coords="155,112,283,141"/>
+<area shape="rect" id="node15" href="$structauxadc__control.html" title="auxadc_control" alt="" coords="164,165,273,195"/>
+<area shape="rect" id="node17" href="$structauxdac__control.html" title="auxdac_control" alt="" coords="164,219,273,248"/>
+<area shape="rect" id="node19" href="$structport__control.html" title="port_control" alt="" coords="173,272,264,301"/>
+<area shape="rect" id="node21" href="$structctrl__outs__control.html" title="ctrl_outs_control" alt="" coords="160,325,277,355"/>
+<area shape="rect" id="node23" href="$structgain__control.html" title="gain_control" alt="" coords="173,379,264,408"/>
+<area shape="rect" id="node25" href="$structad9361__fastlock.html" title="ad9361_fastlock" alt="" coords="455,411,572,440"/>
+<area shape="rect" id="node27" href="$structad9361__fastlock__entry.html" title="ad9361_fastlock_entry" alt="" coords="143,432,295,461"/>
+<area shape="rect" id="node29" href="$structspi__device.html" title="spi_device" alt="" coords="177,508,260,537"/>
+<area shape="rect" id="node31" href="$structdevice.html" title="device" alt="" coords="7,508,65,537"/>
+<area shape="rect" id="node33" href="$structaxiadc__converter.html" title="axiadc_converter" alt="" coords="453,595,573,624"/>
+<area shape="rect" id="node35" href="$structaxiadc__chip__info.html" title="axiadc_chip_info" alt="" coords="160,595,277,624"/>
+<area shape="rect" id="node38" href="$structrx__gain__info.html" title="rx_gain_info" alt="" coords="468,648,559,677"/>
+<area shape="rect" id="node40" href="$structclk__onecell__data.html" title="clk_onecell_data" alt="" coords="455,784,572,813"/>
+<area shape="rect" id="node42" href="$structclk.html" title="clk" alt="" coords="200,745,237,775"/>
 </map>

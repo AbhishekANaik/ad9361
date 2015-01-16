@@ -89,7 +89,7 @@ Collaboration diagram for ad9361_phy_platform_data:</div>
 <div class="dyncontent">
 <div class="center"><img src="structad9361__phy__platform__data__coll__graph.png" border="0" usemap="#ad9361__phy__platform__data_coll__map" alt="Collaboration graph"/></div>
 <map name="ad9361__phy__platform__data_coll__map" id="ad9361__phy__platform__data_coll__map">
-<area shape="rect" id="node2" href="structrssi__control.html" title="rssi_control" alt="" coords="21,5,109,35"/><area shape="rect" id="node4" href="structelna__control.html" title="elna_control" alt="" coords="20,59,111,88"/><area shape="rect" id="node6" href="structauxadc__control.html" title="auxadc_control" alt="" coords="11,112,120,141"/><area shape="rect" id="node8" href="structauxdac__control.html" title="auxdac_control" alt="" coords="11,165,120,195"/><area shape="rect" id="node10" href="structport__control.html" title="port_control" alt="" coords="20,219,111,248"/><area shape="rect" id="node12" href="structctrl__outs__control.html" title="ctrl_outs_control" alt="" coords="7,272,124,301"/><area shape="rect" id="node14" href="structgain__control.html" title="gain_control" alt="" coords="20,325,111,355"/></map>
+<area shape="rect" id="node2" href="structrssi__control.html" title="rssi_control" alt="" coords="27,5,115,35"/><area shape="rect" id="node4" href="structelna__control.html" title="elna_control" alt="" coords="25,59,116,88"/><area shape="rect" id="node6" href="structtx__monitor__control.html" title="tx_monitor_control" alt="" coords="7,112,135,141"/><area shape="rect" id="node8" href="structauxadc__control.html" title="auxadc_control" alt="" coords="16,165,125,195"/><area shape="rect" id="node10" href="structauxdac__control.html" title="auxdac_control" alt="" coords="16,219,125,248"/><area shape="rect" id="node12" href="structport__control.html" title="port_control" alt="" coords="25,272,116,301"/><area shape="rect" id="node14" href="structctrl__outs__control.html" title="ctrl_outs_control" alt="" coords="12,325,129,355"/><area shape="rect" id="node16" href="structgain__control.html" title="gain_control" alt="" coords="25,379,116,408"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
@@ -118,46 +118,50 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>tdd_skip_vco_cal</b><
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_ext_rx_lo</b></td></tr>
 <tr class="memitem:aeb05b951cfe62ca65939b9ce8e5ba163"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb05b951cfe62ca65939b9ce8e5ba163"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_ext_tx_lo</b></td></tr>
-<tr class="memitem:a1c57076042bd3813b7ac0339c7824f01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c57076042bd3813b7ac0339c7824f01"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>dc_offset_update_events</b></td></tr>
-<tr class="memitem:a04d8296011f8d7db6a573f5c6ea28164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04d8296011f8d7db6a573f5c6ea28164"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>dc_offset_attenuation_high</b></td></tr>
-<tr class="memitem:a26f384fb3fae00b12136b00a021643d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26f384fb3fae00b12136b00a021643d1"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>dc_offset_attenuation_low</b></td></tr>
-<tr class="memitem:ab7db380900eb708ebdeb4ba3ab7a8309"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7db380900eb708ebdeb4ba3ab7a8309"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>rf_dc_offset_count_high</b></td></tr>
-<tr class="memitem:a2c24ddb5f0fef127298885ff09a566c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c24ddb5f0fef127298885ff09a566c9"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>rf_dc_offset_count_low</b></td></tr>
-<tr class="memitem:ad66416787c63f126bba3a3456a9f5d32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad66416787c63f126bba3a3456a9f5d32"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>dcxo_coarse</b></td></tr>
-<tr class="memitem:a0ef137f661be02034a2f2837fc0bc8c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ef137f661be02034a2f2837fc0bc8c8"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>dcxo_fine</b></td></tr>
-<tr class="memitem:abb5b91af115aa23d3e8ad172d1926952"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb5b91af115aa23d3e8ad172d1926952"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>rf_rx_input_sel</b></td></tr>
-<tr class="memitem:a95ccb5f3ca34c4d2c747f1d4a4625654"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95ccb5f3ca34c4d2c747f1d4a4625654"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>rf_tx_output_sel</b></td></tr>
-<tr class="memitem:a5f5bc3146ca737d69c94599bfced5454"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f5bc3146ca737d69c94599bfced5454"></a>
-unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>rx_path_clks</b> [NUM_RX_CLOCKS]</td></tr>
-<tr class="memitem:ab50f4e65566f16e300bbe0404511354b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab50f4e65566f16e300bbe0404511354b"></a>
-unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>tx_path_clks</b> [NUM_TX_CLOCKS]</td></tr>
-<tr class="memitem:a6154f21ab9fa17db9eb99c5b3b8b4afa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6154f21ab9fa17db9eb99c5b3b8b4afa"></a>
-u64&#160;</td><td class="memItemRight" valign="bottom"><b>rx_synth_freq</b></td></tr>
-<tr class="memitem:a9b775111f6df57972ac62ccd6add368c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b775111f6df57972ac62ccd6add368c"></a>
-u64&#160;</td><td class="memItemRight" valign="bottom"><b>tx_synth_freq</b></td></tr>
-<tr class="memitem:afac471c7c71dcd3cedb03bdb009bbc80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afac471c7c71dcd3cedb03bdb009bbc80"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>rf_rx_bandwidth_Hz</b></td></tr>
-<tr class="memitem:a102d46588ea554541870954ede74976d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a102d46588ea554541870954ede74976d"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>rf_tx_bandwidth_Hz</b></td></tr>
-<tr class="memitem:a5da45b855f1a46c5a9463a7e6c75c065"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5da45b855f1a46c5a9463a7e6c75c065"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>tx_atten</b></td></tr>
+<tr class="memitem:a9d04115280e4965281e829395db84992"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d04115280e4965281e829395db84992"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>rx1rx2_phase_inversion_en</b></td></tr>
+<tr class="memitem:a00d890ede4fb06f26ef5b0bb130d4ac8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00d890ede4fb06f26ef5b0bb130d4ac8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>qec_tracking_slow_mode_en</b></td></tr>
+<tr class="memitem:aec3d9c3ffca9d30fa1018f1c7ebfc67a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec3d9c3ffca9d30fa1018f1c7ebfc67a"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>dc_offset_update_events</b></td></tr>
+<tr class="memitem:a955b864251e56a8ebe4d551389acb81c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a955b864251e56a8ebe4d551389acb81c"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>dc_offset_attenuation_high</b></td></tr>
+<tr class="memitem:a9d3fc8d51046bb0f1f433002052d0fee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d3fc8d51046bb0f1f433002052d0fee"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>dc_offset_attenuation_low</b></td></tr>
+<tr class="memitem:ae1138299ce5fd7c56f512024d507ad59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1138299ce5fd7c56f512024d507ad59"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>rf_dc_offset_count_high</b></td></tr>
+<tr class="memitem:aa70140594460d76f8784c7770bd7c93a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa70140594460d76f8784c7770bd7c93a"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>rf_dc_offset_count_low</b></td></tr>
+<tr class="memitem:afcbb6584af76a98ccecfd50b60be2381"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcbb6584af76a98ccecfd50b60be2381"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dcxo_coarse</b></td></tr>
+<tr class="memitem:a63354862dce50b166a6358a3e0a3665d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63354862dce50b166a6358a3e0a3665d"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dcxo_fine</b></td></tr>
+<tr class="memitem:a3d39da45687b3e175a00bb8f02342ea1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d39da45687b3e175a00bb8f02342ea1"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>rf_rx_input_sel</b></td></tr>
+<tr class="memitem:a342cf21d6d82d4eec4c836c886198c93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a342cf21d6d82d4eec4c836c886198c93"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>rf_tx_output_sel</b></td></tr>
+<tr class="memitem:a47e601fc38b27ada43604232211efe29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47e601fc38b27ada43604232211efe29"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>rx_path_clks</b> [NUM_RX_CLOCKS]</td></tr>
+<tr class="memitem:a049b154f5551144e8bb1fce42de792ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a049b154f5551144e8bb1fce42de792ea"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_path_clks</b> [NUM_TX_CLOCKS]</td></tr>
+<tr class="memitem:aa43456365e9ad2bb010bfe5cf8a4ae2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa43456365e9ad2bb010bfe5cf8a4ae2b"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>trx_synth_max_fref</b></td></tr>
+<tr class="memitem:a1bafdef572a867dbf2cf18cd49147be7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bafdef572a867dbf2cf18cd49147be7"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>rx_synth_freq</b></td></tr>
+<tr class="memitem:ae864f5ee4a4c314ee881288c7fdadb7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae864f5ee4a4c314ee881288c7fdadb7e"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_synth_freq</b></td></tr>
+<tr class="memitem:a0d82648a8a6e3644e56228b1fc6c1371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d82648a8a6e3644e56228b1fc6c1371"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>rf_rx_bandwidth_Hz</b></td></tr>
+<tr class="memitem:a36133da43307a6f8b097c5169509bcc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36133da43307a6f8b097c5169509bcc9"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>rf_tx_bandwidth_Hz</b></td></tr>
+<tr class="memitem:a66ea907fe7d6ceff53bdaca48775be5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66ea907fe7d6ceff53bdaca48775be5b"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_atten</b></td></tr>
 <tr class="memitem:af0bd66699231dee566557782057226ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0bd66699231dee566557782057226ee"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>update_tx_gain_via_alert</b></td></tr>
-<tr class="memitem:a37f2dd607a42ef96342db75637b94115"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37f2dd607a42ef96342db75637b94115"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>gpio_resetb</b></td></tr>
-<tr class="memitem:a236389958fe95609d02e09f78696a247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a236389958fe95609d02e09f78696a247"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>rx_fastlock_delay_ns</b></td></tr>
-<tr class="memitem:af100c4d88329718ae661243e7785f4af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af100c4d88329718ae661243e7785f4af"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>tx_fastlock_delay_ns</b></td></tr>
+<tr class="memitem:a54d8b3f378d032ad4388496856ebc7c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54d8b3f378d032ad4388496856ebc7c6"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>rx_fastlock_delay_ns</b></td></tr>
+<tr class="memitem:a791054abef986caae865f7ae8fad8104"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a791054abef986caae865f7ae8fad8104"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>tx_fastlock_delay_ns</b></td></tr>
 <tr class="memitem:a8782a48b4bc8ac9259a1c299198d8e4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8782a48b4bc8ac9259a1c299198d8e4c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>trx_fastlock_pinctrl_en</b> [2]</td></tr>
 <tr class="memitem:aa327ea88ed9e18b1cdb46406b0847ac1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa327ea88ed9e18b1cdb46406b0847ac1"></a>
@@ -176,17 +180,27 @@ struct <a class="el" href="structelna__control.html">elna_control</a>&#160;</td>
 struct <a class="el" href="structauxadc__control.html">auxadc_control</a>&#160;</td><td class="memItemRight" valign="bottom"><b>auxadc_ctrl</b></td></tr>
 <tr class="memitem:ad25fe69dae0ccba5e4eafb339708ea14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad25fe69dae0ccba5e4eafb339708ea14"></a>
 struct <a class="el" href="structauxdac__control.html">auxdac_control</a>&#160;</td><td class="memItemRight" valign="bottom"><b>auxdac_ctrl</b></td></tr>
+<tr class="memitem:a23e37f940ace76982a87fb8e89fac0a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23e37f940ace76982a87fb8e89fac0a5"></a>
+struct <a class="el" href="structtx__monitor__control.html">tx_monitor_control</a>&#160;</td><td class="memItemRight" valign="bottom"><b>txmon_ctrl</b></td></tr>
+<tr class="memitem:ab8d3927c7569a211333cb602f1c0e19d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8d3927c7569a211333cb602f1c0e19d"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpio_resetb</b></td></tr>
+<tr class="memitem:af30d0c6ed1debd42a656767d54146ec3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af30d0c6ed1debd42a656767d54146ec3"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpio_sync</b></td></tr>
+<tr class="memitem:a9c33f174871ff6541f9f1b6cbfdf316c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c33f174871ff6541f9f1b6cbfdf316c"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpio_cal_sw1</b></td></tr>
+<tr class="memitem:a6345bd3f59495fd2b57ea2b6193f823c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6345bd3f59495fd2b57ea2b6193f823c"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpio_cal_sw2</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="ad9361_8h_source.html#l03082">3082</a> of file <a class="el" href="ad9361_8h_source.html">ad9361.h</a>.</p>
+<p>Definition at line <a class="el" href="ad9361_8h_source.html#l03105">3105</a> of file <a class="el" href="ad9361_8h_source.html">ad9361.h</a>.</p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>sw/<a class="el" href="ad9361_8h_source.html">ad9361.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 7 2014 11:18:28 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 16 2015 15:05:54 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

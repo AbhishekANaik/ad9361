@@ -92,19 +92,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>Implementation of Main Function.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;xil_cache.h&quot;</code><br/>
-<code>#include &quot;<a class="el" href="parameters_8h_source.html">parameters.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="ad9361__api_8h_source.html">ad9361_api.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="adc__core_8h_source.html">adc_core.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="dac__core_8h_source.html">dac_core.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="console_8h_source.html">console.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="command_8h_source.html">command.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="ad9361__api_8h_source.html">ad9361_api.h</a>&quot;</code><br/>
+<code>#include &quot;parameters.h&quot;</code><br/>
+<code>#include &quot;platform.h&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#sw_2main_8c" alt=""/></div>
 <map name="sw_2main_8c" id="sw_2main_8c">
-<area shape="rect" id="node5" href="parameters_8h.html" title="Parameters Definitions." alt="" coords="117,83,216,112"/><area shape="rect" id="node9" href="ad9361__api_8h.html" title="Header file of AD9361 API Driver." alt="" coords="240,83,339,112"/><area shape="rect" id="node31" href="adc__core_8h.html" title="Header file of ADC Core Driver." alt="" coords="363,83,448,112"/><area shape="rect" id="node33" href="dac__core_8h.html" title="Header file of DAC Core Driver." alt="" coords="472,83,557,112"/><area shape="rect" id="node35" href="console_8h.html" title="Header file of Console Driver." alt="" coords="581,83,659,112"/><area shape="rect" id="node37" href="command_8h.html" title="Header file of AD9361 Command Driver." alt="" coords="683,83,773,112"/><area shape="rect" id="node11" href="util_8h.html" title="Header file of Util driver." alt="" coords="264,160,315,189"/><area shape="rect" id="node21" href="common_8h.html" title="Header file of Common Driver." alt="" coords="317,315,400,344"/><area shape="rect" id="node28" href="ad9361_8h.html" title="Header file of AD9361 Driver." alt="" coords="503,237,577,267"/></map>
+<area shape="rect" id="node3" href="ad9361__api_8h.html" title="Header file of AD9361 API Driver." alt="" coords="168,83,267,112"/><area shape="rect" id="node5" href="util_8h.html" title="Header file of Util driver." alt="" coords="192,160,243,189"/><area shape="rect" id="node15" href="ad9361_8h.html" title="Header file of AD9361 Driver." alt="" coords="317,237,392,267"/><area shape="rect" id="node18" href="common_8h.html" title="Header file of Common Driver." alt="" coords="351,315,433,344"/></map>
 </div>
 </div>
 <p><a href="main_8c_source.html">Go to the source code of this file.</a></p>
@@ -117,23 +113,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:adbe9d76e5862251a2d807e142e8ba457"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbe9d76e5862251a2d807e142e8ba457"></a>
-<a class="el" href="structcommand.html">command</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cmd_list</b> []</td></tr>
-<tr class="memitem:a628ccd6fe09f1c67b389b5b0601fcf64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a628ccd6fe09f1c67b389b5b0601fcf64"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>cmd_no</b></td></tr>
-<tr class="memitem:ab81b5a0e7550be8c6aba11af0c23f59d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab81b5a0e7550be8c6aba11af0c23f59d"></a>
-cmd_function&#160;</td><td class="memItemRight" valign="bottom"><b>cmd_functions</b> [11]</td></tr>
-<tr class="memitem:a42416d99bb2db2007e3b19b8951fea0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42416d99bb2db2007e3b19b8951fea0d"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>cmd</b> = 0</td></tr>
-<tr class="memitem:aa1bcd2baa5fe9c5c94179342266c0dfe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1bcd2baa5fe9c5c94179342266c0dfe"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>param</b> [5] = {0, 0, 0, 0, 0}</td></tr>
-<tr class="memitem:a4d4818a29792be456e841e7a9a05b1cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d4818a29792be456e841e7a9a05b1cc"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>param_no</b> = 0</td></tr>
-<tr class="memitem:a5ac0dddc31b87bd4785430f0e466cda9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ac0dddc31b87bd4785430f0e466cda9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cmd_type</b> = -1</td></tr>
-<tr class="memitem:ae79d56d3c313f4c07aec55e42c36f880"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae79d56d3c313f4c07aec55e42c36f880"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>invalid_cmd</b> = 0</td></tr>
-<tr class="memitem:ac15f9d8d55f25637015fc722739296de"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><b>received_cmd</b> [30]</td></tr>
 <tr class="memitem:a2c771505ce585a3ff2b179c6366aa955"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c771505ce585a3ff2b179c6366aa955"></a>
 <a class="el" href="structAD9361__InitParam.html">AD9361_InitParam</a>&#160;</td><td class="memItemRight" valign="bottom"><b>default_init_param</b></td></tr>
 <tr class="memitem:acbc7733d5c0356bb1f8414cf24156836"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structAD9361__RXFIRConfig.html">AD9361_RXFIRConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rx_fir_config</b></td></tr>
@@ -158,23 +137,6 @@ struct <a class="el" href="structad9361__rf__phy.html">ad9361_rf_phy</a> *&#160;
 
 <p>Definition in file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 </div><h2>Variable Documentation</h2>
-<a class="anchor" id="ac15f9d8d55f25637015fc722739296de"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char received_cmd[30]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,</div>
-<div class="line">                                                                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,</div>
-<div class="line">                                                                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0}</div>
-</div><!-- fragment -->
-<p>Definition at line <a class="el" href="main_8c_source.html#l00062">62</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="acbc7733d5c0356bb1f8414cf24156836"></a>
 <div class="memitem">
 <div class="memproto">
@@ -188,17 +150,26 @@ struct <a class="el" href="structad9361__rf__phy.html">ad9361_rf_phy</a> *&#160;
 <div class="line">        3, </div>
 <div class="line">        0, </div>
 <div class="line">        1, </div>
-<div class="line">        {-4, -6, -37, 35, 186, 86, -284, 315,</div>
+<div class="line">        {0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         -4, -6, -37, 35, 186, 86, -284, 315,</div>
 <div class="line">         107, 219, -4, 271, 558, -307, -1182, -356,</div>
 <div class="line">         658, 157, 207, 1648, 790, -2525, -2553, 748,</div>
 <div class="line">         865, -476, 3737, 6560, -3583, -14731, -5278, 14819,</div>
 <div class="line">         14819, -5278, -14731, -3583, 6560, 3737, -476, 865,</div>
 <div class="line">         748, -2553, -2525, 790, 1648, 207, 157, 658,</div>
 <div class="line">         -356, -1182, -307, 558, 271, -4, 219, 107,</div>
-<div class="line">         -315, -284, 86, 186, 35, -37, -6, -4} </div>
+<div class="line">         -315, -284, 86, 186, 35, -37, -6, -4,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0}, </div>
+<div class="line">         128 </div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="main_8c_source.html#l00247">247</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00286">286</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
@@ -215,24 +186,33 @@ struct <a class="el" href="structad9361__rf__phy.html">ad9361_rf_phy</a> *&#160;
 <div class="line">        3, </div>
 <div class="line">        -6, </div>
 <div class="line">        1, </div>
-<div class="line">        {-4, -6, -37, 35, 186, 86, -284, 315,</div>
+<div class="line">        {0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         -4, -6, -37, 35, 186, 86, -284, 315,</div>
 <div class="line">         107, 219, -4, 271, 558, -307, -1182, -356,</div>
 <div class="line">         658, 157, 207, 1648, 790, -2525, -2553, 748,</div>
 <div class="line">         865, -476, 3737, 6560, -3583, -14731, -5278, 14819,</div>
 <div class="line">         14819, -5278, -14731, -3583, 6560, 3737, -476, 865,</div>
 <div class="line">         748, -2553, -2525, 790, 1648, 207, 157, 658,</div>
 <div class="line">         -356, -1182, -307, 558, 271, -4, 219, 107,</div>
-<div class="line">         -315, -284, 86, 186, 35, -37, -6, -4} </div>
+<div class="line">         -315, -284, 86, 186, 35, -37, -6, -4,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">         0, 0, 0, 0, 0, 0, 0, 0}, </div>
+<div class="line">         128 </div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="main_8c_source.html#l00261">261</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00309">309</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 7 2014 11:18:28 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 16 2015 15:05:54 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

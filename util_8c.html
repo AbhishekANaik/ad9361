@@ -84,8 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">util.c File Reference</div>  </div>
 </div><!--header-->
@@ -93,15 +92,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>Implementation of Util Driver.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;xparameters.h&quot;</code><br/>
-<code>#include &quot;xspi.h&quot;</code><br/>
-<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br/>
+<code>#include &quot;string.h&quot;</code><br/>
+<code>#include &quot;platform.h&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for util.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="util_8c__incl.png" border="0" usemap="#sw_2util_8c" alt=""/></div>
 <map name="sw_2util_8c" id="sw_2util_8c">
-<area shape="rect" id="node7" href="util_8h.html" title="Header file of Util driver." alt="" coords="213,83,264,112"/><area shape="rect" id="node17" href="common_8h.html" title="Header file of Common Driver." alt="" coords="267,237,349,267"/><area shape="rect" id="node24" href="ad9361_8h.html" title="Header file of AD9361 Driver." alt="" coords="452,160,527,189"/></map>
+<area shape="rect" id="node3" href="util_8h.html" title="Header file of Util driver." alt="" coords="192,83,243,112"/><area shape="rect" id="node13" href="ad9361_8h.html" title="Header file of AD9361 Driver." alt="" coords="317,160,392,189"/><area shape="rect" id="node16" href="common_8h.html" title="Header file of Common Driver." alt="" coords="351,237,433,267"/></map>
 </div>
 </div>
 <p><a href="util_8c_source.html">Go to the source code of this file.</a></p>
@@ -110,65 +109,36 @@ Include dependency graph for util.c:</div>
 Macros</h2></td></tr>
 <tr class="memitem:a2f660aa23a5dbc0f4b8df48b4302b8c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f660aa23a5dbc0f4b8df48b4302b8c3"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>BITS_PER_LONG</b>&#160;&#160;&#160;32</td></tr>
-<tr class="memitem:a7f4237211a2af41cbbc5701d1507812e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f4237211a2af41cbbc5701d1507812e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BIT_MASK</b>(nr)&#160;&#160;&#160;(1UL &lt;&lt; ((nr) % BITS_PER_LONG))</td></tr>
-<tr class="memitem:aa1d7bafbfefe720ffcfd2155cc451ba6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1d7bafbfefe720ffcfd2155cc451ba6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BIT_WORD</b>(nr)&#160;&#160;&#160;((nr) / BITS_PER_LONG)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afc75812fc444edaf4b211b9d48ad1518"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc75812fc444edaf4b211b9d48ad1518"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#afc75812fc444edaf4b211b9d48ad1518">udelay</a> (unsigned long usecs)</td></tr>
-<tr class="memdesc:afc75812fc444edaf4b211b9d48ad1518"><td class="mdescLeft">&#160;</td><td class="mdescRight">udelay <br/></td></tr>
-<tr class="memitem:add90263954773808514815b132cefb45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add90263954773808514815b132cefb45"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#add90263954773808514815b132cefb45">mdelay</a> (unsigned long msecs)</td></tr>
-<tr class="memdesc:add90263954773808514815b132cefb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">mdelay <br/></td></tr>
-<tr class="memitem:ac477e0859d5308b7ae019359f6992e5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac477e0859d5308b7ae019359f6992e5d"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#ac477e0859d5308b7ae019359f6992e5d">spi_init</a> (uint32_t device_id, uint8_t clk_pha, uint8_t clk_pol)</td></tr>
-<tr class="memdesc:ac477e0859d5308b7ae019359f6992e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">spi_init <br/></td></tr>
-<tr class="memitem:a637585ce5225b6c6eebd8ba551f7b4f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a637585ce5225b6c6eebd8ba551f7b4f1"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a637585ce5225b6c6eebd8ba551f7b4f1">spi_read</a> (uint8_t *data, uint8_t bytes_number)</td></tr>
-<tr class="memdesc:a637585ce5225b6c6eebd8ba551f7b4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">spi_read <br/></td></tr>
-<tr class="memitem:a087ac95fe3e4ec60e1c65aaca67a1941"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a087ac95fe3e4ec60e1c65aaca67a1941"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a087ac95fe3e4ec60e1c65aaca67a1941">spi_write_then_read</a> (const unsigned char *txbuf, unsigned n_tx, unsigned char *rxbuf, unsigned n_rx)</td></tr>
-<tr class="memdesc:a087ac95fe3e4ec60e1c65aaca67a1941"><td class="mdescLeft">&#160;</td><td class="mdescRight">spi_write_then_read <br/></td></tr>
-<tr class="memitem:abcc8efcf7444c9aa7373e007c0fe40b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcc8efcf7444c9aa7373e007c0fe40b2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#abcc8efcf7444c9aa7373e007c0fe40b2">gpio_init</a> (uint32_t device_id)</td></tr>
-<tr class="memdesc:abcc8efcf7444c9aa7373e007c0fe40b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">gpio_init <br/></td></tr>
-<tr class="memitem:a4ae4725e273968c5196b11a4080f6e01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ae4725e273968c5196b11a4080f6e01"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a4ae4725e273968c5196b11a4080f6e01">gpio_direction</a> (uint8_t pin, uint8_t direction)</td></tr>
-<tr class="memdesc:a4ae4725e273968c5196b11a4080f6e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">gpio_direction <br/></td></tr>
-<tr class="memitem:a2a0b52821ec038702d6211b54d9fcfe5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a0b52821ec038702d6211b54d9fcfe5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a2a0b52821ec038702d6211b54d9fcfe5">gpio_data</a> (uint8_t pin, uint8_t data)</td></tr>
-<tr class="memdesc:a2a0b52821ec038702d6211b54d9fcfe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">gpio_data <br/></td></tr>
-<tr class="memitem:a8333c13ee1361c7ac8adff7e4ddeac07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8333c13ee1361c7ac8adff7e4ddeac07"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a8333c13ee1361c7ac8adff7e4ddeac07">gpio_is_valid</a> (int number)</td></tr>
-<tr class="memdesc:a8333c13ee1361c7ac8adff7e4ddeac07"><td class="mdescLeft">&#160;</td><td class="mdescRight">gpio_is_valid <br/></td></tr>
-<tr class="memitem:a56d8f8f32b820e091107d2455d279862"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56d8f8f32b820e091107d2455d279862"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a56d8f8f32b820e091107d2455d279862">gpio_set_value</a> (unsigned gpio, int value)</td></tr>
-<tr class="memdesc:a56d8f8f32b820e091107d2455d279862"><td class="mdescLeft">&#160;</td><td class="mdescRight">gpio_set_value <br/></td></tr>
-<tr class="memitem:aa58cd2311497abbddda89ab7859bdc40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa58cd2311497abbddda89ab7859bdc40"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#aa58cd2311497abbddda89ab7859bdc40">clk_prepare_enable</a> (struct <a class="el" href="structclk.html">clk</a> *<a class="el" href="structclk.html">clk</a>)</td></tr>
-<tr class="memdesc:aa58cd2311497abbddda89ab7859bdc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">clk_prepare_enable <br/></td></tr>
-<tr class="memitem:a3d47117304cb10a599d81f7ec70eec16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d47117304cb10a599d81f7ec70eec16"></a>
-unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a3d47117304cb10a599d81f7ec70eec16">clk_get_rate</a> (struct <a class="el" href="structad9361__rf__phy.html">ad9361_rf_phy</a> *phy, struct <a class="el" href="structrefclk__scale.html">refclk_scale</a> *clk_priv)</td></tr>
-<tr class="memdesc:a3d47117304cb10a599d81f7ec70eec16"><td class="mdescLeft">&#160;</td><td class="mdescRight">clk_get_rate <br/></td></tr>
-<tr class="memitem:a711b9cd88c9121677adf67ab964b93ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a711b9cd88c9121677adf67ab964b93ec"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a711b9cd88c9121677adf67ab964b93ec">clk_set_rate</a> (struct <a class="el" href="structad9361__rf__phy.html">ad9361_rf_phy</a> *phy, struct <a class="el" href="structrefclk__scale.html">refclk_scale</a> *clk_priv, unsigned long rate)</td></tr>
-<tr class="memdesc:a711b9cd88c9121677adf67ab964b93ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">clk_set_rate <br/></td></tr>
-<tr class="memitem:a639435f12877fccf16a5276cb15270a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a639435f12877fccf16a5276cb15270a4"></a>
-unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a639435f12877fccf16a5276cb15270a4">int_sqrt</a> (unsigned long x)</td></tr>
-<tr class="memdesc:a639435f12877fccf16a5276cb15270a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">int_sqrt <br/></td></tr>
-<tr class="memitem:a4a6beda225c32f3aa63d0b1044942096"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a6beda225c32f3aa63d0b1044942096"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a4a6beda225c32f3aa63d0b1044942096">ilog2</a> (int x)</td></tr>
-<tr class="memdesc:a4a6beda225c32f3aa63d0b1044942096"><td class="mdescLeft">&#160;</td><td class="mdescRight">ilog2 <br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ac6981d55462a4f6d1e9da8151dbda171"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6981d55462a4f6d1e9da8151dbda171"></a>
-XSpi_Config *&#160;</td><td class="memItemRight" valign="bottom"><b>spi_config</b></td></tr>
-<tr class="memitem:a77303d0a44247c6aeaee621ffe4ba2ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77303d0a44247c6aeaee621ffe4ba2ab"></a>
-XSpi&#160;</td><td class="memItemRight" valign="bottom"><b>spi_instance</b></td></tr>
+<tr class="memitem:a93bc2edd498be2e4a9d821440890c504"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93bc2edd498be2e4a9d821440890c504"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a93bc2edd498be2e4a9d821440890c504">clk_prepare_enable</a> (struct <a class="el" href="structclk.html">clk</a> *<a class="el" href="structclk.html">clk</a>)</td></tr>
+<tr class="memdesc:a93bc2edd498be2e4a9d821440890c504"><td class="mdescLeft">&#160;</td><td class="mdescRight">clk_prepare_enable <br/></td></tr>
+<tr class="memitem:a7da6c1e7e24b12d993a387028d7504c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7da6c1e7e24b12d993a387028d7504c7"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a7da6c1e7e24b12d993a387028d7504c7">clk_get_rate</a> (struct <a class="el" href="structad9361__rf__phy.html">ad9361_rf_phy</a> *phy, struct <a class="el" href="structrefclk__scale.html">refclk_scale</a> *clk_priv)</td></tr>
+<tr class="memdesc:a7da6c1e7e24b12d993a387028d7504c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">clk_get_rate <br/></td></tr>
+<tr class="memitem:a9a19195eac4f21f7ea8aa66f0144646e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a19195eac4f21f7ea8aa66f0144646e"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a9a19195eac4f21f7ea8aa66f0144646e">clk_set_rate</a> (struct <a class="el" href="structad9361__rf__phy.html">ad9361_rf_phy</a> *phy, struct <a class="el" href="structrefclk__scale.html">refclk_scale</a> *clk_priv, uint32_t rate)</td></tr>
+<tr class="memdesc:a9a19195eac4f21f7ea8aa66f0144646e"><td class="mdescLeft">&#160;</td><td class="mdescRight">clk_set_rate <br/></td></tr>
+<tr class="memitem:afa0dc715e67ae5189c22b2cf140b54ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa0dc715e67ae5189c22b2cf140b54ce"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#afa0dc715e67ae5189c22b2cf140b54ce">int_sqrt</a> (uint32_t x)</td></tr>
+<tr class="memdesc:afa0dc715e67ae5189c22b2cf140b54ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">int_sqrt <br/></td></tr>
+<tr class="memitem:a2c62df9053582394b5427e9ba12add5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c62df9053582394b5427e9ba12add5a"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a2c62df9053582394b5427e9ba12add5a">ilog2</a> (int32_t x)</td></tr>
+<tr class="memdesc:a2c62df9053582394b5427e9ba12add5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ilog2 <br/></td></tr>
+<tr class="memitem:a9dd7317168fd7c0a4b3140a48583ccff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dd7317168fd7c0a4b3140a48583ccff"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a9dd7317168fd7c0a4b3140a48583ccff">do_div</a> (uint64_t *n, uint64_t base)</td></tr>
+<tr class="memdesc:a9dd7317168fd7c0a4b3140a48583ccff"><td class="mdescLeft">&#160;</td><td class="mdescRight">do_div <br/></td></tr>
+<tr class="memitem:a72fde97d856a273ef86960a453e9ef38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72fde97d856a273ef86960a453e9ef38"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a72fde97d856a273ef86960a453e9ef38">__ffs</a> (uint32_t word)</td></tr>
+<tr class="memdesc:a72fde97d856a273ef86960a453e9ef38"><td class="mdescLeft">&#160;</td><td class="mdescRight">__ffs <br/></td></tr>
+<tr class="memitem:a50c3c7e69ccacde763592fd3e6210108"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50c3c7e69ccacde763592fd3e6210108"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a50c3c7e69ccacde763592fd3e6210108">ERR_PTR</a> (long error)</td></tr>
+<tr class="memdesc:a50c3c7e69ccacde763592fd3e6210108"><td class="mdescLeft">&#160;</td><td class="mdescRight">ERR_PTR. <br/></td></tr>
+<tr class="memitem:a879ee0956348fd24dc2ac69c2d4f220b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a879ee0956348fd24dc2ac69c2d4f220b"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a879ee0956348fd24dc2ac69c2d4f220b">zmalloc</a> (size_t size)</td></tr>
+<tr class="memdesc:a879ee0956348fd24dc2ac69c2d4f220b"><td class="mdescLeft">&#160;</td><td class="mdescRight">zmalloc <br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of Util Driver. </p>
@@ -189,7 +159,7 @@ XSpi&#160;</td><td class="memItemRight" valign="bottom"><b>spi_instance</b></td>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 7 2014 11:18:28 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 16 2015 15:05:54 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

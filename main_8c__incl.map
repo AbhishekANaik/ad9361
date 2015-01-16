@@ -1,11 +1,6 @@
 <map id="sw/main.c" name="sw/main.c">
-<area shape="rect" id="node5" href="$parameters_8h.html" title="Parameters Definitions." alt="" coords="117,83,216,112"/>
-<area shape="rect" id="node9" href="$ad9361__api_8h.html" title="Header file of AD9361 API Driver." alt="" coords="240,83,339,112"/>
-<area shape="rect" id="node31" href="$adc__core_8h.html" title="Header file of ADC Core Driver." alt="" coords="363,83,448,112"/>
-<area shape="rect" id="node33" href="$dac__core_8h.html" title="Header file of DAC Core Driver." alt="" coords="472,83,557,112"/>
-<area shape="rect" id="node35" href="$console_8h.html" title="Header file of Console Driver." alt="" coords="581,83,659,112"/>
-<area shape="rect" id="node37" href="$command_8h.html" title="Header file of AD9361 Command Driver." alt="" coords="683,83,773,112"/>
-<area shape="rect" id="node11" href="$util_8h.html" title="Header file of Util driver." alt="" coords="264,160,315,189"/>
-<area shape="rect" id="node21" href="$common_8h.html" title="Header file of Common Driver." alt="" coords="317,315,400,344"/>
-<area shape="rect" id="node28" href="$ad9361_8h.html" title="Header file of AD9361 Driver." alt="" coords="503,237,577,267"/>
+<area shape="rect" id="node3" href="$ad9361__api_8h.html" title="Header file of AD9361 API Driver." alt="" coords="168,83,267,112"/>
+<area shape="rect" id="node5" href="$util_8h.html" title="Header file of Util driver." alt="" coords="192,160,243,189"/>
+<area shape="rect" id="node15" href="$ad9361_8h.html" title="Header file of AD9361 Driver." alt="" coords="317,237,392,267"/>
+<area shape="rect" id="node18" href="$common_8h.html" title="Header file of Common Driver." alt="" coords="351,315,433,344"/>
 </map>
