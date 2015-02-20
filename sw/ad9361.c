@@ -5032,12 +5032,12 @@ int32_t ad9361_validate_enable_fir(struct ad9361_rf_phy *phy)
 	}
 
 #ifdef _DEBUG
-	dev_dbg(&phy->spi->dev, "%s:RX %lu %lu %lu %lu %lu %lu",
+	dev_dbg(&phy->spi->dev, "%s:RX %"PRIu32" %"PRIu32" %"PRIu32" %"PRIu32" %"PRIu32" %"PRIu32,
 		__func__, rx[BBPLL_FREQ], rx[ADC_FREQ],
 		rx[R2_FREQ], rx[R1_FREQ],
 		rx[CLKRF_FREQ], rx[RX_SAMPL_FREQ]);
 
-	dev_dbg(&phy->spi->dev, "%s:TX %lu %lu %lu %lu %lu %lu",
+	dev_dbg(&phy->spi->dev, "%s:TX %"PRIu32" %"PRIu32" %"PRIu32" %"PRIu32" %"PRIu32" %"PRIu32,
 		__func__, tx[BBPLL_FREQ], tx[ADC_FREQ],
 		tx[R2_FREQ], tx[R1_FREQ],
 		tx[CLKRF_FREQ], tx[RX_SAMPL_FREQ]);
