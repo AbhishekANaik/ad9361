@@ -95,6 +95,8 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>reference_clk_rat
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>two_rx_two_tx_mode_enable</b></td></tr>
 <tr class="memitem:a3ae8ad98537521ac4e6dbfedb513dfba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ae8ad98537521ac4e6dbfedb513dfba"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>frequency_division_duplex_mode_enable</b></td></tr>
+<tr class="memitem:af85667fcf11023442108c1b80a8ea83b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af85667fcf11023442108c1b80a8ea83b"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>frequency_division_duplex_independent_mode_enable</b></td></tr>
 <tr class="memitem:aed1ddb889baffd69990bf47a06687ce6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed1ddb889baffd69990bf47a06687ce6"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>tdd_use_dual_synth_mode_enable</b></td></tr>
 <tr class="memitem:af75b9f8a3491ad7e2fd1723e3538102c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af75b9f8a3491ad7e2fd1723e3538102c"></a>
@@ -349,6 +351,8 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>elna_bypass_loss_
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>elna_rx1_gpo0_control_enable</b></td></tr>
 <tr class="memitem:a8f1d82c63be36acf708a8d90fbbec978"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f1d82c63be36acf708a8d90fbbec978"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>elna_rx2_gpo1_control_enable</b></td></tr>
+<tr class="memitem:a121c6e22ac06450c0cb6c8b3fbdef79f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a121c6e22ac06450c0cb6c8b3fbdef79f"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>digital_interface_tune_skip_mode</b></td></tr>
 <tr class="memitem:a8a040a73d9b48134b4a04da9133cda75"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a040a73d9b48134b4a04da9133cda75"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pp_tx_swap_enable</b></td></tr>
 <tr class="memitem:a3b800d481d57931344e3b2ebc852298f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b800d481d57931344e3b2ebc852298f"></a>
@@ -401,6 +405,50 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>lvds_bias_mV</b><
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>lvds_rx_onchip_termination_enable</b></td></tr>
 <tr class="memitem:a58b4fe49da52d805a2b74788984b44ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58b4fe49da52d805a2b74788984b44ad"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>rx1rx2_phase_inversion_en</b></td></tr>
+<tr class="memitem:ad86eb9f69812f345ce8ac5b64b064c45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad86eb9f69812f345ce8ac5b64b064c45"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>lvds_invert1_control</b></td></tr>
+<tr class="memitem:a669b6f7f2b73c4c51e88a1f8c2fd55fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a669b6f7f2b73c4c51e88a1f8c2fd55fc"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>lvds_invert2_control</b></td></tr>
+<tr class="memitem:ad497d7ea4a4ae1f9184be3844bf7aab5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad497d7ea4a4ae1f9184be3844bf7aab5"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo0_inactive_state_high_enable</b></td></tr>
+<tr class="memitem:a34f86d97605e026c37f9df149843c13e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34f86d97605e026c37f9df149843c13e"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo1_inactive_state_high_enable</b></td></tr>
+<tr class="memitem:a4b18c8bc5865daa4c1b973122cb22d28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b18c8bc5865daa4c1b973122cb22d28"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo2_inactive_state_high_enable</b></td></tr>
+<tr class="memitem:af7eba0d7c6ddaf89f6198fc430b1d08b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7eba0d7c6ddaf89f6198fc430b1d08b"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo3_inactive_state_high_enable</b></td></tr>
+<tr class="memitem:afadb026231f7db90e90fe2e04fa6fced"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afadb026231f7db90e90fe2e04fa6fced"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo0_slave_rx_enable</b></td></tr>
+<tr class="memitem:a7551ebb001468f0fa8d54bcfc2a219f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7551ebb001468f0fa8d54bcfc2a219f6"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo0_slave_tx_enable</b></td></tr>
+<tr class="memitem:a0719be05527591225f1469b6ff745977"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0719be05527591225f1469b6ff745977"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo1_slave_rx_enable</b></td></tr>
+<tr class="memitem:a3453f282da924d3160d27ff11a8e0917"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3453f282da924d3160d27ff11a8e0917"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo1_slave_tx_enable</b></td></tr>
+<tr class="memitem:aeee690444addde68f9e2be09cc9709b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeee690444addde68f9e2be09cc9709b6"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo2_slave_rx_enable</b></td></tr>
+<tr class="memitem:a4fadec2ea47a8f025977849059101a7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fadec2ea47a8f025977849059101a7b"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo2_slave_tx_enable</b></td></tr>
+<tr class="memitem:a99381f47a949dfa9617c7f9f9dac15d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99381f47a949dfa9617c7f9f9dac15d9"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo3_slave_rx_enable</b></td></tr>
+<tr class="memitem:a270692f8154fef6b589b3f211954c089"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a270692f8154fef6b589b3f211954c089"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo3_slave_tx_enable</b></td></tr>
+<tr class="memitem:acea01b975b77c32c21a2ac466fa282ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acea01b975b77c32c21a2ac466fa282ee"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo0_rx_delay_us</b></td></tr>
+<tr class="memitem:abafed0e95c3e83b6b4ee9bc075546bb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abafed0e95c3e83b6b4ee9bc075546bb0"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo0_tx_delay_us</b></td></tr>
+<tr class="memitem:a609e8c2665da6368cc0df021e9fa58af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a609e8c2665da6368cc0df021e9fa58af"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo1_rx_delay_us</b></td></tr>
+<tr class="memitem:a7411fd3936389b728bd27c3f4b5a12b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7411fd3936389b728bd27c3f4b5a12b6"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo1_tx_delay_us</b></td></tr>
+<tr class="memitem:ad635ad9606592ec3127fefa1f30e5038"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad635ad9606592ec3127fefa1f30e5038"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo2_rx_delay_us</b></td></tr>
+<tr class="memitem:ad442dc05d7fedc30d0fa2c2e40294296"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad442dc05d7fedc30d0fa2c2e40294296"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo2_tx_delay_us</b></td></tr>
+<tr class="memitem:a9cf558f4d90b69e5cfce6df27fa3bf6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cf558f4d90b69e5cfce6df27fa3bf6c"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo3_rx_delay_us</b></td></tr>
+<tr class="memitem:a33f688f821a1a1acdb43ccaff9be6bd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33f688f821a1a1acdb43ccaff9be6bd3"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpo3_tx_delay_us</b></td></tr>
 <tr class="memitem:a979b1ba2b03dc4cddb2f030943aedf64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a979b1ba2b03dc4cddb2f030943aedf64"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>low_high_gain_threshold_mdB</b></td></tr>
 <tr class="memitem:a3b9e77d23113fc8c8ea3928517666d97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b9e77d23113fc8c8ea3928517666d97"></a>
@@ -441,7 +489,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>gpio_cal_sw2</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 16 2015 16:20:43 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 9 2015 13:01:48 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
