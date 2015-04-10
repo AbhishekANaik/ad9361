@@ -222,14 +222,15 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">cal</td><td>The selected calibration (TX_QUAD_CAL, RFDC_CAL). </td></tr>
+    <tr><td class="paramname">cal</td><td>The selected calibration (TX_QUAD_CAL, RFDC_CAL). Accepted values: TX_QUAD_CAL RFDC_CAL </td></tr>
     <tr><td class="paramname">arg</td><td>For TX_QUAD_CAL - the optional RX phase value overwrite (set to zero). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01547">1547</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01773">1773</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -264,9 +265,10 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01455">1455</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01669">1669</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -312,7 +314,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00456">456</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00504">504</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -358,7 +360,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00831">831</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00966">966</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -395,14 +397,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">tx_ch</td><td>The selected RX channel (1, 2). </td></tr>
+    <tr><td class="paramname">tx_ch</td><td>The selected RX channel (RX1, RX2). Accepted values: RX1 (0) RX2 (1) </td></tr>
     <tr><td class="paramname">fir_cfg</td><td>FIR filter configuration output file. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00688">688</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00810">810</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -439,7 +441,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00761">761</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00890">890</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -476,14 +478,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">ch</td><td>The desired channel (0, 1). </td></tr>
+    <tr><td class="paramname">ch</td><td>The desired channel (RX1, RX2). Accepted values: RX1 (0) RX2 (1) </td></tr>
     <tr><td class="paramname">gc_mode</td><td>A variable to store the gain control mode. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00655">655</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00772">772</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -520,7 +522,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00599">599</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00702">702</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -557,7 +559,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00866">866</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01004">1004</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -594,7 +596,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00528">528</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00623">623</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -631,14 +633,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">ch</td><td>The desired channel number (0, 1). </td></tr>
+    <tr><td class="paramname">ch</td><td>The desired channel number (RX1, RX2). Accepted values: RX1 (0) RX2 (1) </td></tr>
     <tr><td class="paramname">gain_db</td><td>A variable to store the RF gain (dB). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00490">490</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00581">581</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -675,7 +677,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00910">910</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01048">1048</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -712,7 +714,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00796">796</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00928">928</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -749,14 +751,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">ch</td><td>The desired channel (0, 1). </td></tr>
+    <tr><td class="paramname">ch</td><td>The desired channel (RX1, RX2). Accepted values: RX1 (0) RX2 (1) </td></tr>
     <tr><td class="paramname">rssi</td><td>A variable to store the RSSI. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00615">615</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00721">721</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -793,7 +795,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00567">567</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00666">666</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -837,7 +839,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01393">1393</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01602">1602</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -874,7 +876,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01533">1533</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01754">1754</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -911,14 +913,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">ch</td><td>The desired channel number (0, 1). </td></tr>
+    <tr><td class="paramname">ch</td><td>The desired channel number (TX1, TX2). Accepted values: TX1 (0) TX2 (1) </td></tr>
     <tr><td class="paramname">attenuation_mdb</td><td>A variable to store the attenuation value (mdB). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00990">990</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01152">1152</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -955,7 +957,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01310">1310</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01501">1501</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -992,14 +994,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">tx_ch</td><td>The selected TX channel (1, 2). </td></tr>
+    <tr><td class="paramname">tx_ch</td><td>The selected TX channel (TX1, TX2). Accepted values: TX1 (0) TX2 (1) </td></tr>
     <tr><td class="paramname">fir_cfg</td><td>FIR filter configuration output file. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01134">1134</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01313">1313</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1038,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01202">1202</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01388">1388</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1075,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01100">1100</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01274">1274</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1110,7 +1112,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01029">1029</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01195">1195</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1149,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01280">1280</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01468">1468</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1184,14 +1186,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">ch</td><td>The desired channel (0, 1). </td></tr>
+    <tr><td class="paramname">ch</td><td>The desired channel (TX1, TX2). Accepted values: TX1 (0) TX2 (1) </td></tr>
     <tr><td class="paramname">rssi_db_x_1000</td><td>A variable to store the RSSI. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01217">1217</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01406">1406</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1228,7 +1230,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01068">1068</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01238">1238</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1262,9 +1264,10 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A structure that contains the AD9361 current state in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A structure that contains the AD9361 current state in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00071">71</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00073">73</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1306,18 +1309,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Load RX fastlock profile. </p>
+<p>Load RX fastlock profile. A previously saved profile can be loaded in any of the 8 available slots. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). </td></tr>
-    <tr><td class="paramname">values</td><td>Fastlock profile program data. </td></tr>
+    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). Accepted values: 0 - 7 </td></tr>
+    <tr><td class="paramname">values</td><td>Fastlock profile program data. Example: val0,val1,val2,…,val15 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00947">947</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01098">1098</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1344,17 +1347,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Recall RX fastlock profile. </p>
+<p>Recall specified RX fastlock profile. When in fastlock pin select mode (init_param-&gt;rx_fastlock_pincontrol_enable), the function needs to be called before then the pin-control can be used. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). </td></tr>
+    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). Accepted values: 0 - 7 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00935">935</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01081">1081</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1387,18 +1390,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Save RX fastlock profile. </p>
+<p>Save RX fastlock profile. In order to use more than 8 Profiles, an existing profile can be read back and stored by the user application. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). </td></tr>
+    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). Accepted values: 0 - 7 </td></tr>
     <tr><td class="paramname">values</td><td>Fastlock profile program data. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00959">959</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01113">1113</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1425,17 +1428,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Store RX fastlock profile. </p>
+<p>Store RX fastlock profile. To create a profile tune the synthesizer (<a class="el" href="ad9361__api_8c.html#ae87846c50e314926a95aa039867a5b4e">ad9361_set_rx_lo_freq()</a>) and then call this function specifying the target profile number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). </td></tr>
+    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). Accepted values: 0 - 7 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00924">924</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01066">1066</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1466,13 +1469,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">mode</td><td>The ENSM mode (SLEEP, ALERT, FDD, PINCTRL). </td></tr>
+    <tr><td class="paramname">mode</td><td>The ENSM mode. Accepted values: ENSM_MODE_TX ENSM_MODE_RX ENSM_MODE_ALERT ENSM_MODE_FDD ENSM_MODE_WAIT ENSM_MODE_SLEEP ENSM_MODE_PINCTRL ENSM_MODE_PINCTRL_FDD_INDEP </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00439">439</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00452">452</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1512,13 +1516,13 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">ch_mode</td><td>Number of channels mode: 1 - 1x1; 2 - 2x2. </td></tr>
+    <tr><td class="paramname">ch_mode</td><td>Number of channels mode (MODE_1x1, MODE_2x2). Accepted values: MODE_1x1 (1) MODE_2x2 (2) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01406">1406</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01618">1618</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1549,13 +1553,13 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). </td></tr>
+    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). Accepted values: ENABLE (1) DISABLE (0) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00810">810</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00945">945</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1590,9 +1594,10 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00669">669</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00788">788</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1632,13 +1637,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). </td></tr>
+    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). Accepted values: ENABLE (1) DISABLE (0) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00738">738</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00867">867</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1675,14 +1681,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">ch</td><td>The desired channel (0, 1). </td></tr>
-    <tr><td class="paramname">gc_mode</td><td>The gain control mode (GAIN_MGC, GAIN_FASTATTACK_AGC, GAIN_SLOWATTACK_AGC, GAIN_HYBRID_AGC). </td></tr>
+    <tr><td class="paramname">ch</td><td>The desired channel (RX1, RX2). Accepted values: RX1 (0) RX2 (1) </td></tr>
+    <tr><td class="paramname">gc_mode</td><td>The gain control mode (manual, fast_attack, slow_attack, hybrid). Accepted values: RF_GAIN_MGC (manual) RF_GAIN_FASTATTACK_AGC (fast_attack) RF_GAIN_SLOWATTACK_AGC (slow_attack) RF_GAIN_HYBRID_AGC (hybrid) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00635">635</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00749">749</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1713,13 +1719,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">lo_freq_hz</td><td>The desired frequency (Hz). </td></tr>
+    <tr><td class="paramname">lo_freq_hz</td><td>The desired frequency (Hz). Example: 2400000000 (2.4 GHz) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00582">582</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00685">685</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1750,13 +1757,13 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). </td></tr>
+    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). Accepted values: ENABLE (1) DISABLE (0) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00845">845</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00983">983</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1787,13 +1794,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">bandwidth_hz</td><td>The desired bandwidth (Hz). </td></tr>
+    <tr><td class="paramname">bandwidth_hz</td><td>The desired bandwidth (Hz). Example: 18000000 (18 MHz) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00508">508</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00603">603</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1830,14 +1838,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">ch</td><td>The desired channel number (0, 1). </td></tr>
-    <tr><td class="paramname">gain_db</td><td>The RF gain (dB). </td></tr>
+    <tr><td class="paramname">ch</td><td>The desired channel number (RX1, RX2). Accepted values: RX1 (0) RX2 (1) </td></tr>
+    <tr><td class="paramname">gain_db</td><td>The RF gain (dB). Example: 10 (10 dB) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00471">471</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00559">559</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1868,13 +1876,13 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">mode</td><td>The RF port. Accepted values: 0 (RX1A_N &amp; RX1A_P) and (RX2A_N &amp; RX2A_P) enabled; balanced 1 (RX1B_N &amp; RX1B_P) and (RX2B_N &amp; RX2B_P) enabled; balanced 2 (RX1C_N &amp; RX1C_P) and (RX2C_N &amp; RX2C_P) enabled; balanced 3 RX1A_N and RX2A_N enabled; unbalanced 4 RX1A_P and RX2A_P enabled; unbalanced 5 RX1B_N and RX2B_N enabled; unbalanced 6 RX1B_P and RX2B_P enabled; unbalanced 7 RX1C_N and RX2C_N enabled; unbalanced 8 RX1C_P and RX2C_P enabled; unbalanced </td></tr>
+    <tr><td class="paramname">mode</td><td>The RF port. Accepted values: A_BALANCED (0 - (RX1A_N &amp; RX1A_P) and (RX2A_N &amp; RX2A_P) enabled; balanced) B_BALANCED (1 - (RX1B_N &amp; RX1B_P) and (RX2B_N &amp; RX2B_P) enabled; balanced) C_BALANCED (2 - (RX1C_N &amp; RX1C_P) and (RX2C_N &amp; RX2C_P) enabled; balanced) A_N (3 - RX1A_N and RX2A_N enabled; unbalanced) A_P (4 - RX1A_P and RX2A_P enabled; unbalanced) B_N (5 - RX1B_N and RX2B_N enabled; unbalanced) B_P (6 - RX1B_P and RX2B_P enabled; unbalanced) C_N (7 - RX1C_N and RX2C_N enabled; unbalanced) C_P (8 - RX1C_P and RX2C_P enabled; unbalanced) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00890">890</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01028">1028</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1905,13 +1913,13 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). </td></tr>
+    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). Accepted values: ENABLE (1) DISABLE (0) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00775">775</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00907">907</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1942,13 +1950,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">sampling_freq_hz</td><td>The desired frequency (Hz). </td></tr>
+    <tr><td class="paramname">sampling_freq_hz</td><td>The desired frequency (Hz). Example: 30720000 (30.72 MHz) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00542">542</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00641">641</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -1979,13 +1988,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). </td></tr>
+    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). Accepted values: ENABLE (1) DISABLE (0) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01490">1490</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01709">1709</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2027,9 +2037,10 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01370">1370</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01579">1579</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2060,13 +2071,13 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">rate_gov</td><td>Option: 0 - highest OSR; 1 - nominal. </td></tr>
+    <tr><td class="paramname">rate_gov</td><td>OSR rate governor (highest, nominal). Accepted values: HIGHEST_OSR (0 - highest OSR) NOMINAL_OSR (1 - nominal) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01517">1517</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01738">1738</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2103,14 +2114,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">ch</td><td>The desired channel number (0, 1). </td></tr>
-    <tr><td class="paramname">attenuation_mdb</td><td>The attenuation (mdB). </td></tr>
+    <tr><td class="paramname">ch</td><td>The desired channel number (TX1, TX2). Accepted values: TX1 (0) TX2 (1) </td></tr>
+    <tr><td class="paramname">attenuation_mdb</td><td>The attenuation (mdB). Example: 10000 (10 dB) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l00971">971</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01130">1130</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2141,13 +2152,13 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). </td></tr>
+    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). Accepted values: ENABLE (1) DISABLE (0) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01294">1294</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01485">1485</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2182,9 +2193,10 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01115">1115</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01291">1291</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -2224,13 +2236,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). </td></tr>
+    <tr><td class="paramname">en_dis</td><td>The option (ENABLE, DISABLE). Accepted values: ENABLE (1) DISABLE (0) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01179">1179</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01365">1365</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2261,13 +2274,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">lo_freq_hz</td><td>The desired frequency (Hz). </td></tr>
+    <tr><td class="paramname">lo_freq_hz</td><td>The desired frequency (Hz). Example: 2400000000 (2.4 GHz) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01083">1083</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01257">1257</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2298,13 +2312,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">bandwidth_hz</td><td>The desired bandwidth (Hz). </td></tr>
+    <tr><td class="paramname">bandwidth_hz</td><td>The desired bandwidth (Hz). Example: 18000000 (18 MHz) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01009">1009</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01175">1175</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2335,13 +2350,13 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">mode</td><td>The RF port. Accepted values: 0 TXA 1 TXB </td></tr>
+    <tr><td class="paramname">mode</td><td>The RF port. Accepted values: TXA (0) TXB (1) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01260">1260</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01448">1448</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2372,13 +2387,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 current state structure. </td></tr>
-    <tr><td class="paramname">sampling_freq_hz</td><td>The desired frequency (Hz). </td></tr>
+    <tr><td class="paramname">sampling_freq_hz</td><td>The desired frequency (Hz). Example: 30720000 (30.72 MHz) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise.</dd></dl>
+<p>Note: This function will/may affect the data path. </p>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01043">1043</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01213">1213</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2411,18 +2427,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Load TX fastlock profile. </p>
+<p>Load TX fastlock profile. A previously saved profile can be loaded in any of the 8 available slots. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). </td></tr>
-    <tr><td class="paramname">values</td><td>Fastlock profile program data. </td></tr>
+    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). Accepted values: 0 - 7 </td></tr>
+    <tr><td class="paramname">values</td><td>Fastlock profile program data. Example: val0,val1,val2,…,val15 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01346">1346</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01550">1550</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2449,17 +2465,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Recall TX fastlock profile. </p>
+<p>Recall specified TX fastlock profile. When in fastlock pin select mode (init_param-&gt;tx_fastlock_pincontrol_enable), the function needs to be called before then the pin-control can be used. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). </td></tr>
+    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). Accepted values: 0 - 7 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01334">1334</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01533">1533</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2492,18 +2508,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Save TX fastlock profile. </p>
+<p>Save TX fastlock profile. In order to use more than 8 Profiles, an existing profile can be read back and stored by the user application. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). </td></tr>
+    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). Accepted values: 0 - 7 </td></tr>
     <tr><td class="paramname">values</td><td>Fastlock profile program data. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01358">1358</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01565">1565</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2530,17 +2546,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Store TX fastlock profile. </p>
+<p>Store TX fastlock profile. To create a profile tune the synthesizer (<a class="el" href="ad9361__api_8c.html#a078c1f1351b6e7b8c3f0209e7fe9559b">ad9361_set_tx_lo_freq()</a>) and then call this function specifying the target profile number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">phy</td><td>The AD9361 state structure. </td></tr>
-    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). </td></tr>
+    <tr><td class="paramname">profile</td><td>The profile number (0 - 7). Accepted values: 0 - 7 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative error code otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01323">1323</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
+<p>Definition at line <a class="el" href="ad9361__api_8c_source.html#l01518">1518</a> of file <a class="el" href="ad9361__api_8c_source.html">ad9361_api.c</a>.</p>
 
 </div>
 </div>
@@ -2583,7 +2599,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 9 2015 13:01:48 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 10 2015 17:19:27 for AD9361 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

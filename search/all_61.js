@@ -28,7 +28,7 @@ var searchData=
   ['ad9361_5fclkout_5fcontrol',['ad9361_clkout_control',['../ad9361_8c.html#ae925dfd3b619dd0ff9b3b1fe1adf0240',1,'ad9361.c']]],
   ['ad9361_5fctrl_5fouts_5fsetup',['ad9361_ctrl_outs_setup',['../ad9361_8c.html#a4946bf0779c51a2fc8fbc3fb712624ef',1,'ad9361.c']]],
   ['ad9361_5fdebugfs_5fentry',['ad9361_debugfs_entry',['../structad9361__debugfs__entry.html',1,'']]],
-  ['ad9361_5fdig_5finterface_5ftiming_5fanalysis',['ad9361_dig_interface_timing_analysis',['../ad9361_8c.html#aafb39a150183de40499b6301e4fc9b17',1,'ad9361.c']]],
+  ['ad9361_5fdig_5finterface_5ftiming_5fanalysis',['ad9361_dig_interface_timing_analysis',['../ad9361_8c.html#ad8a136112b1adb63e98063006c3ac178',1,'ad9361.c']]],
   ['ad9361_5fdig_5ftune',['ad9361_dig_tune',['../ad9361_8c.html#ab1e215a2d64a76657877ed31df7b4027',1,'ad9361.c']]],
   ['ad9361_5fdo_5fcalib',['ad9361_do_calib',['../ad9361__api_8c.html#a03fcdd075b219c906ada4fff7f8b1e72',1,'ad9361_do_calib(struct ad9361_rf_phy *phy, uint32_t cal, int32_t arg):&#160;ad9361_api.c'],['../ad9361__api_8h.html#a03fcdd075b219c906ada4fff7f8b1e72',1,'ad9361_do_calib(struct ad9361_rf_phy *phy, uint32_t cal, int32_t arg):&#160;ad9361_api.c']]],
   ['ad9361_5fdo_5fcalib_5frun',['ad9361_do_calib_run',['../ad9361_8c.html#a4f4b93d642e976a773938d7b616bd972',1,'ad9361_do_calib_run(struct ad9361_rf_phy *phy, uint32_t cal, int32_t arg):&#160;ad9361.c'],['../ad9361_8h.html#a4f4b93d642e976a773938d7b616bd972',1,'ad9361_do_calib_run(struct ad9361_rf_phy *phy, uint32_t cal, int32_t arg):&#160;ad9361.c']]],
