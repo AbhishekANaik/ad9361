@@ -49,6 +49,11 @@
 #include "ad9361.h"
 #include "platform.h"
 #include "util.h"
+#include "config.h"
+
+/* Used for static code size optimization: please see config.h */
+const bool has_split_gt = HAVE_SPLIT_GAIN_TABLE;
+const bool have_tdd_tables = HAVE_TDD_SYNTH_TABLE;
 
 #define SYNTH_LUT_SIZE	53
 
@@ -527,13 +532,12 @@ static const uint8_t gm_st_gain[16] = { 0x78, 0x74, 0x70, 0x6C, 0x68, 0x64, 0x60
 static const uint8_t gm_st_ctrl[16] = { 0x0, 0xD, 0x15, 0x1B, 0x21, 0x25, 0x29,
 0x2C, 0x2F, 0x31, 0x33, 0x34, 0x35, 0x3A, 0x3D, 0x3E };
 
-
 static const int8_t lna_table[] = { 6, 17, 19, 25 };
 static const int8_t tia_table[] = { -6, 0 };
 static const int8_t mixer_table[] = { 0, 5, 11, 16,
-17, 18, 19, 20,
-21, 22, 23, 24,
-25, 26, 27, 28 };
+	17, 18, 19, 20,
+	21, 22, 23, 24,
+	25, 26, 27, 28 };
 
 /******************************************************************************/
 /********************** Macros and Constants Definitions **********************/
@@ -1203,7 +1207,7 @@ static int32_t ad9361_load_gt(struct ad9361_rf_phy *phy, uint64_t freq, uint32_t
 	ad9361_spi_writef(spi, REG_AGC_CONFIG_2,
 		AGC_USE_FULL_GAIN_TABLE, !phy->pdata->split_gt);
 
-	if (phy->pdata->split_gt) {
+	if (has_split_gt && phy->pdata->split_gt) {
 		tab = &split_gain_table[band][0];
 		index_max = SIZE_SPLIT_TABLE;
 	}
@@ -1419,8 +1423,7 @@ static int32_t ad9361_rfpll_vco_init(struct ad9361_rf_phy *phy,
 
 	if (phy->pdata->fdd || phy->pdata->tdd_use_fdd_tables) {
 		tab = &SynthLUT_FDD[range][0];
-	}
-	else {
+	} else if (have_tdd_tables) {
 		tab = &SynthLUT_TDD[range][0];
 	}
 
@@ -1613,7 +1616,7 @@ int32_t ad9361_get_rx_gain(struct ad9361_rf_phy *phy,
 		}
 	}
 
-	if (phy->pdata->split_gt)
+	if (has_split_gt && phy->pdata->split_gt)
 		rc = ad9361_get_split_table_gain(phy, idx_reg, rx_gain);
 	else
 		rc = ad9361_get_full_table_gain(phy, idx_reg, rx_gain);
@@ -1887,7 +1890,7 @@ int32_t ad9361_set_rx_gain(struct ad9361_rf_phy *phy,
 		goto out;
 	}
 
-	if (phy->pdata->split_gt)
+	if (has_split_gt && phy->pdata->split_gt)
 		rc = set_split_table_gain(phy, idx_reg, rx_gain);
 	else
 		rc = set_full_table_gain(phy, idx_reg, rx_gain);
@@ -2952,7 +2955,7 @@ static int32_t ad9361_tx_quad_calib(struct ad9361_rf_phy *phy,
 	ad9361_spi_write(spi, REG_MAG_FTEST_THRESH, 0x01);
 	ad9361_spi_write(spi, REG_MAG_FTEST_THRESH_2, 0x01);
 
-	if (phy->pdata->split_gt) {
+	if (has_split_gt && phy->pdata->split_gt) {
 		tab = &split_gain_table[phy->current_table][0];
 		index_max = SIZE_SPLIT_TABLE;
 		lpf_tia_mask = 0x20;
@@ -3377,7 +3380,7 @@ static int32_t ad9361_gc_setup(struct ad9361_rf_phy *phy, struct gain_control *c
 	ctrl->adc_ovr_sample_size = clamp_t(uint8_t, ctrl->adc_ovr_sample_size, 1U, 8U);
 	reg = ADC_OVERRANGE_SAMPLE_SIZE(ctrl->adc_ovr_sample_size - 1);
 
-	if (phy->pdata->split_gt &&
+	if (has_split_gt && phy->pdata->split_gt &&
 		(ctrl->mgc_rx1_ctrl_inp_en || ctrl->mgc_rx2_ctrl_inp_en)) {
 		switch (ctrl->mgc_split_table_ctrl_inp_gain_mode) {
 		case 1:
@@ -3397,7 +3400,7 @@ static int32_t ad9361_gc_setup(struct ad9361_rf_phy *phy, struct gain_control *c
 	reg |= MANUAL_INCR_STEP_SIZE(ctrl->mgc_inc_gain_step - 1);
 	ad9361_spi_write(spi, REG_AGC_CONFIG_3, reg); // Incr Step Size, ADC Overrange Size
 
-	if (phy->pdata->split_gt) {
+	if (has_split_gt && phy->pdata->split_gt) {
 		reg = SIZE_SPLIT_TABLE - 1;
 	}
 	else {
@@ -3437,7 +3440,7 @@ static int32_t ad9361_gc_setup(struct ad9361_rf_phy *phy, struct gain_control *c
 	ad9361_spi_writef(spi, REG_SMALL_LMT_OVERLOAD_THRESH,
 		SMALL_LMT_OVERLOAD_THRESH(~0), reg);
 
-	if (phy->pdata->split_gt) {
+	if (has_split_gt && phy->pdata->split_gt) {
 		/* REVIST */
 		ad9361_spi_write(spi, REG_RX1_MANUAL_LPF_GAIN, 0x58); // Rx1 LPF Gain Index
 		ad9361_spi_write(spi, REG_RX2_MANUAL_LPF_GAIN, 0x18); // Rx2 LPF Gain Index
