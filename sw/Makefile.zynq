@@ -62,3 +62,6 @@ clean:
 	rm -rf *.a *.o */*.o ps7_cortexa9_0 bsp .metadata hw_platform_0 dummy
 	rm -f $(EXEC) lscript.ld SDK.log my_SDKproj.xml
 
+run:
+	xmd -tcl $(PLATFORM)/run.tcl $(EXEC)
+
